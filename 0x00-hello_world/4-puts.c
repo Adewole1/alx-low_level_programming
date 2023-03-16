@@ -1,7 +1,11 @@
 #include<stdio.h>
 
 /**
- * Functin to print using puts()
+ * main - using puts() to print
+ *
+ * Description: This uses
+ * puts function to print
+ * Return: it returns integer 0
  */
 int main(void)
 {
