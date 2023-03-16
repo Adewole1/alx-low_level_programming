@@ -4,7 +4,7 @@
  * main - print size of types
  *
  * Description: This uses
- * printf function to print 
+ * printf function to print
  * some intrinsic data type of c
  * Return: it returns integer 0
  */
