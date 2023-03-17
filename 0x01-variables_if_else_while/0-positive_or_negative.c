@@ -1,4 +1,7 @@
+#include <stdlib.h>
+#include <time.h>
 #include<stdio.h>
+
 
 /**
  * main - using printif() to print a conditional
@@ -8,8 +11,13 @@
  * or equal to zero
  * Return: it returns integer 0
  */
-int main(int n)
+int main(void)
 {
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX/2;
+
 	if (n>0)
 	{
 		printf("%d is positive\n", n);
