@@ -8,7 +8,7 @@
  * or equal to zero
  * Return: it returns integer 0
  */
-int main(n)
+int main(int n)
 {
 	if (n>0)
 	{
