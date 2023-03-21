@@ -3,7 +3,7 @@
 /**
  * main - Function to Print the alphabet.
  *
- * This function prints aplphabet letters
+ * Description - This function prints aplphabet letters
  * using _putchar
  *
  * Return: void
