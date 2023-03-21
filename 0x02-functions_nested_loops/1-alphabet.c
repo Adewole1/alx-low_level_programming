@@ -5,7 +5,7 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+void print_alphabet(void)
 {
 	char alphabets[26] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
@@ -15,5 +15,10 @@ int main(void)
 		_putchar(alphabets[i]);
 	}
 	_putchar('\n');
+}
+
+int main(void)
+{
+	print_alphabet();
 	return (0);
 }
