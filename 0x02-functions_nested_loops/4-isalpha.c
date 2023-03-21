@@ -6,15 +6,7 @@
  * Return: void
  */
 int _isalpha(int c)
-{
-	char alphabets[26] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	
-	if (c in alphabets)
-	{
-		return (1);
-	} else
-	{
-		return (0);
-	}
+{	
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
 
