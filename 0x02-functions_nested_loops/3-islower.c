@@ -6,10 +6,8 @@
  * Return: int
  */
 int _islower(int c)
-{
-	char alphabets[26] = "abcdefghijklmnopqrstuvwxyz";
-	
-	if (c in alphabets)
+{	
+	if (c >= 'a' && c <= 'z')
 	{
 		return (1);
 	} else
