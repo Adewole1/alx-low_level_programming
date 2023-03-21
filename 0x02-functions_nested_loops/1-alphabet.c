@@ -1,9 +1,12 @@
 #include "main.h"
 
 /**
- * main - Function to Print the alphabet line by line.
+ * main - Function to Print the alphabet.
  *
- * Return: Always 0 (Success)
+ * This function prints aplphabet letters
+ * using _putchar
+ *
+ * Return: void
  */
 void print_alphabet(void)
 {
