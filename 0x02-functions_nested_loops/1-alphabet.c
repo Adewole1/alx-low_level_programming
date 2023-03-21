@@ -1,10 +1,7 @@
 #include "main.h"
 
 /**
- * main - Function to Print the alphabet.
- *
- * Description - This function prints aplphabet letters
- * using _putchar
+ * print_alphabet - Function to print the alphabet
  *
  * Return: void
  */
