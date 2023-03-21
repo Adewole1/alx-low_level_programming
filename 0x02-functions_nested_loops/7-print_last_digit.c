@@ -18,6 +18,10 @@ int print_last_digit(int n)
 
 	mod = n % 10;
 
+	if (mod < a)
+	{
+		mod = -mod;
+	}
 	_putchar(mod + '0');
 	return (mod);
 }
