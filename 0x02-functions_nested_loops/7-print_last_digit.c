@@ -18,7 +18,7 @@ int print_last_digit(int n)
 
 	mod = n % 10;
 
-	if (mod < a)
+	if (mod < 0)
 	{
 		mod = -mod;
 	}
