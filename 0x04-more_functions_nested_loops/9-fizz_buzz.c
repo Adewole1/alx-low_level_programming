@@ -3,10 +3,10 @@
 /**
  * main - function to print number 1 - 100
  *
- * Return: nothing
+ * Return: always zero
  */
 
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -26,4 +26,6 @@ void main(void)
 			printf("%d", i);
 		}
 	}
+
+	return (0);
 }
