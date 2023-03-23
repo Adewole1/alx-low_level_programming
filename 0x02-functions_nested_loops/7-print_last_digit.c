@@ -1,27 +1,36 @@
 #include "main.h"
 
 /**
- * print_last_digit - Function to print last digit of a number
+ * print_diagonal - Function to print diagonal
  *
- * @n: number to be checked
+ * @n: number of times to print
  *
  * Return: int
  */
-int print_last_digit(int n)
+
+void print_diagonal(int n)
 {
-	int mod;
+	int i, j, diff;
 
-	if (n < 0)
+	j = n;
+
+	if (n > 0)
 	{
-		n = -n;
-	}
+		diff = j - n;
 
-	mod = n % 10;
+		if (diff > 0)
+		{
+			for (i = 1; i <= diff; i++)
+			{
+				_putchar(32);
+			}
+		}
 
-	if (mod < 0)
+		_putchar(92);
+		_putchar('\n');
+	} else
 	{
-		mod = -mod;
+		_putchar(92);
+		_putchar('\n');
 	}
-	_putchar(mod + '0');
-	return (mod);
 }
