@@ -25,7 +25,10 @@ int main(void)
 		{
 			printf("%d", i);
 		}
+
+		printf(" ");
 	}
+	printf("\n");
 
 	return (0);
 }
