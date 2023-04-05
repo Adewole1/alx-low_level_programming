@@ -1,33 +1,25 @@
 #include "main.h"
 
 /**
- * _strspn - function to search the segment of a string
+ * *_strchr - function to get the first occurence
+ * of a character in a string
  *
- * @s: string memory area
- * @accept: string segment to find
+ * @s: string memory area to search
+ * @c: character to find
  *
  * Return: int
  */
 
-unsigned int _strspn(char *s, char *accept)
+char *_strchr(char *s, char *c)
 {
-	unsigned int i, n;
+	unsigned int i;
 
-	while (*s)
+	for (i = 0; s[i] >= '\0'; i++)
 	{
-		for (i = 0; accept[i]; i++)
+		if (s[i] == c)
 		{
-			if (*s == accept[i])
-			{
-				n++;
-				break;
-			}
-			else if (accept[i + 1] == '\0')
-			{
-				return (n);
-			}
+			return (&s[i]);
 		}
-		s++;
 	}
-	return (n);
+	return (0);
 }
