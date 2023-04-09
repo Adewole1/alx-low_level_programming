@@ -14,12 +14,14 @@
 int main(int argc, char *argv[])
 {
 	int i, sum = 0;
+	char *remain;
 
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (atoi(argv[i]) == 0 && strcmp(argv[i], "0") != 0)
+			strtol(argv[i], &remain, 10);
+			if (strcmp(remain, "") != 0)
 			{
 				printf("Error\n");
 				return (1);
