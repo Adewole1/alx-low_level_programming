@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - function to print it's name in std
@@ -12,13 +13,13 @@
 
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int i, sum = - 0;
 
 	if (argc >= 2)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (atoi(argv[i]) == 0 && argv[i] != 0)
+			if (atoi(argv[i]) == 0 && strcmp(argv[i], "0") != 0)
 			{
 				printf("Error\n");
 				return (1);
