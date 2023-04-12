@@ -54,7 +54,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (size1 != 0)
 	{
-		while (i < size && s1[i] != '\0')
+		while (s1[i] != '\0')
 		{
 			new_str[i] = s1[i];
 			i++;
@@ -63,7 +63,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (size2 != 0)
 	{
-		while ((i + j) < size && s2[j] != '\0')
+		while (s2[j] != '\0')
 		{
 			new_str[i] = s2[j];
 			i++;
