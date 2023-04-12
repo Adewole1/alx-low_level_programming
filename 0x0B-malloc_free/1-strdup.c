@@ -41,7 +41,7 @@ char *_strdup(char *str)
 		return (NULL);
 	size = _strlen_recursion(str);
 
-	new_str = (char *)calloc(size, sizeof(char));
+	new_str = (char *)malloc(size * sizeof(char));
 
 	if (new_str == NULL)
 		return (NULL);
