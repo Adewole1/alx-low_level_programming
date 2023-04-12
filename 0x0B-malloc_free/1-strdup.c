@@ -36,7 +36,7 @@ char *_strdup(char *str)
 	unsigned int i;
 	unsigned int size;
 
-	size = _strlen_recursion(char *str);
+	size = _strlen_recursion(str);
 
 	new_str = (char *)calloc(size, sizeof(char));
 
