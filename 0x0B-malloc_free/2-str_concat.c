@@ -24,7 +24,7 @@ int _strlen_recursion(char *str)
 }
 
 /**
- * _strconcat - function to create array of characters to allocated memory
+ * str_concat - function to create array of characters to allocated memory
  *
  * @s1: string 1 to fill memory with
  * @s2: string 2 to fill memory with
@@ -32,7 +32,7 @@ int _strlen_recursion(char *str)
  * Return: pointer to new array
  */
 
-char *_strconcat(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	char *new_str;
 	unsigned int i = 0, j = 0;
