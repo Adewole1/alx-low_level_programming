@@ -38,14 +38,13 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i = 0, j = 0;
 	unsigned int size = 0;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
+	if (s1 == NULL || s1 == "")
+		s1 = "\0";
+	if (s2 == NULL || s2 == "")
+		s2 = "\0";
 	size += _strlen_recursion(s1);
 	size += _strlen_recursion(s2);
 
-	printf("%d\n", size);
 	new_str = (char *)malloc(size * sizeof(char) + 1);
 
 	if (new_str == NULL)
