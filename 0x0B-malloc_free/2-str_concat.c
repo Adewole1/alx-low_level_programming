@@ -36,31 +36,39 @@ char *str_concat(char *s1, char *s2)
 {
 	char *new_str;
 	unsigned int i = 0, j = 0;
-	unsigned int size = 0;
+	unsigned int size;
+	unsigned int size1 = 0, size2 = 0;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	size += _strlen_recursion(s1);
-	size += _strlen_recursion(s2);
+	size1 = _strlen_recursion(s1);
+	size2 = _strlen_recursion(s2);
+	size = size1 + size2;
 
 	new_str = (char *)malloc(size * sizeof(char) + 1);
 
 	if (new_str == NULL)
 		return (NULL);
 
-	while (i < size && s1[i] != '\0' && s1[i] != '')
+	if (size1 != 0)
 	{
-		new_str[i] = s1[i];
-		i++;
+		while (i < size && s1[i] != '\0')
+		{
+			new_str[i] = s1[i];
+			i++;
+		}
 	}
 
-	while ((i + j) < size && s2[j] != '\0' && s2[j] != '')
+	if (size2 != 0)
 	{
-		new_str[i] = s2[j];
-		i++;
-		j++;
+		while ((i + j) < size && s2[j] != '\0')
+		{
+			new_str[i] = s2[j];
+			i++;
+			j++;
+		}
 	}
 
 	return (new_str);
