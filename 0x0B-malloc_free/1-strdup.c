@@ -34,20 +34,20 @@ int _strlen_recursion(char *str)
 char *_strdup(char *str)
 {
 	char *new_str;
-	unsigned int i;
+	unsigned int i = 0;
 	unsigned int size;
 
 	size = _strlen_recursion(str);
 
 	new_str = (char *)calloc(size, sizeof(char));
 
-	if (size == 0 || new_str == NULL)
+	if (str == NULL || new_str == NULL)
 		return (NULL);
 
-	for (i = 0; i < size; i++)
+	while (i < size && str[i] != '\0')
 	{
-		str += i;
-		new_str[i] = str[0];
+		new_str[i] = str[i];
+		i++;
 	}
 
 	return (new_str);
