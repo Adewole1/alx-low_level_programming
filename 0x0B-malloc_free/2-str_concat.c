@@ -38,10 +38,10 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i = 0, j = 0;
 	unsigned int size = 0;
 
-	if (s1 == NULL || s1 == "")
-		s1 = "\0";
-	if (s2 == NULL || s2 == "")
-		s2 = "\0";
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	size += _strlen_recursion(s1);
 	size += _strlen_recursion(s2);
 
@@ -50,13 +50,13 @@ char *str_concat(char *s1, char *s2)
 	if (new_str == NULL)
 		return (NULL);
 
-	while (i < size && s1[i] != '\0')
+	while (i < size && s1[i] != '\0' && s1[i] != '')
 	{
 		new_str[i] = s1[i];
 		i++;
 	}
 
-	while ((i + j) < size && s2[j] != '\0')
+	while ((i + j) < size && s2[j] != '\0' && s2[j] != '')
 	{
 		new_str[i] = s2[j];
 		i++;
