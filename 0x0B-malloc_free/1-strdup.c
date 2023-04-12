@@ -37,11 +37,13 @@ char *_strdup(char *str)
 	unsigned int i = 0;
 	unsigned int size;
 
+	if (str == NULL)
+		return (NULL);
 	size = _strlen_recursion(str);
 
 	new_str = (char *)calloc(size, sizeof(char));
 
-	if (str == NULL || new_str == NULL)
+	if (new_str == NULL)
 		return (NULL);
 
 	while (i < size && str[i] != '\0')
