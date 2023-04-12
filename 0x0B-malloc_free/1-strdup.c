@@ -3,6 +3,26 @@
 #include "main.h"
 
 /**
+ * _strlen_recursion - function to recursively count length of string
+ *
+ * @str: string to count
+ *
+ * Return: count
+ */
+
+int _strlen_recursion(char *str)
+{
+	int count = 0;
+
+	if (*str != '\0')
+	{
+		count += _strlen_recursion(str + 1);
+	}
+
+	return (count);
+}
+
+/**
  * _strdup - function to create array of characters to allocated memory
  *
  * @str: string to fill memory with
@@ -12,17 +32,15 @@
 
 char *_strdup(char *str)
 {
+	char *new_str;
 	unsigned int i;
-	unsigned int size = 0;
+	unsigned int size;
 
-	while (*str[size] != '\0)
-	{
-		size++;
-	}
+	size = _strlen_recursion(char *str);
 
 	new_str = (char *)calloc(size, sizeof(char));
 
-	if (size == 0 || str == NULL)
+	if (size == 0 || new_str == NULL)
 		return (NULL);
 
 	for (i = 0; i < size; i++)
