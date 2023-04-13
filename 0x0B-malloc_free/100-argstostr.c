@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * argtostr - function to concatenate array of characters to allocated memory
+ * argstostr - function to concatenate array of characters to allocated memory
  *
  * @ac: arguments count
  * @av: array of arguments
@@ -11,7 +11,7 @@
  * Return: pointer to new array
  */
 
-char *argtostr(int ac, char **av)
+char *argstostr(int ac, char **av)
 {
 	char *new_str;
 	int k = 0, l = 0;
