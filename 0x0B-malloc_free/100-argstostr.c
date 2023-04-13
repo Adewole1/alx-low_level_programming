@@ -14,8 +14,8 @@
 char *argtostr(int ac, char **av)
 {
 	char *new_str;
-	unsigned int k = 0, l = 0;
-	unsigned int i, j;
+	int k = 0, l = 0;
+	int i, j;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
