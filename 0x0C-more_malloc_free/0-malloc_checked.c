@@ -3,21 +3,21 @@
 #include "main.h"
 
 /**
- * malloc_changed - function to allocate memory
+ * malloc_checked - function to allocate memory
  *
  * @b: size of memory to allocate
  *
  * Return: pointer to memory
  */
 
-void *malloc_changed(unsigned int b)
+void *malloc_checked(unsigned int b)
 {
 	void *mem;
 
 	mem = malloc(b);
 
 	if (mem == NULL)
-		return (98);
+		exit(98);
 
 	return (mem);
 }
