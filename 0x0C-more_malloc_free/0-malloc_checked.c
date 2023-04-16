@@ -17,7 +17,7 @@ void *malloc_changed(unsigned int b)
 	mem = malloc(b);
 
 	if (mem == NULL)
-		return (NULL);
+		return (98);
 
-	return (str);
+	return (mem);
 }
