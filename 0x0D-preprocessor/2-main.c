@@ -3,11 +3,12 @@
 /**
  * main - Function to print the name of file where it was compiled from
  *
- * Return: nothing
+ * Return: Always 0
  */
 
 
-void main(void)
+int main(void)
 {
 	printf("%s\n", __FILE__);
+	return (0);
 }
