@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 	char *string, *separator = "";
 	unsigned int i = 0;
 
-	va_start(args_list, n);
+	va_start(args_list, format);
 
 	if (format)
 	{
@@ -45,7 +45,7 @@ void print_all(const char * const format, ...)
 					i++;
 					continue;
 			}
-			sep = ", ";
+			separator = ", ";
 			i++;
 		}
 	}
