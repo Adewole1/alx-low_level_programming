@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 /**
  * main - Funtion to print it's own opcodes
  *
@@ -14,7 +13,8 @@
 int main(int argc, char *argv[])
 {
 	int nb, i;
-	char *array;
+	int (*addr)(int, char **) = main;
+	unsigned char code;
 
 	if (argc != 2)
 	{
@@ -30,16 +30,20 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	array = (char *)main;
-
 	for (i = 0; i < nb; i++)
 	{
+		code = *(unsigned char *)addr;
+		printf("%.2x", code);
+
 		if (i == nb - 1)
-		{
-			printf("%02hhx\n", array[i]);
-			break;
-		}
-		printf("%02hhx\n", array[i]);
+			continue;
+
+		printf(" ");
+
+		addr++;
 	}
+
+	printf("\n");
+
 	return (0);
 }
