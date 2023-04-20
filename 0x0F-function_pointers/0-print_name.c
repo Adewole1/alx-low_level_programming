@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "main.h"
+#include "function_pointers.h"
 
 /**
  * print_name - Function to print based on another function
@@ -12,7 +12,8 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	void (*ptr)(char *name);
+	if (name == NULL || f == NULL)
+		return;
 
-	ptr = f;
+	f(name);
 }
