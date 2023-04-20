@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 			printf("%02hhx\n", array[i]);
 			break;
 		}
-		printf("%02hhx", array[i]);
+		printf("%02hhx\n", array[i]);
 	}
 	return (0);
 }
