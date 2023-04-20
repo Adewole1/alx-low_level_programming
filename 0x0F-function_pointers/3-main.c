@@ -9,7 +9,6 @@
  * @argv: An array of pointers to the arguments.
  *
  * Return: Always 0.
-
  */
 
 int main(int __attribute__((__unused__)) argc, char *argv[])
@@ -31,12 +30,10 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	if (get_op_func(ops) == NULL || ops[1] != '\0')
 	{
 		printf("Error\n");
-                exit(99);
+		exit(99);
 	}
 
-	if ((*ops == '/' && num_2 == 0) ||
-
-            (*ops == '%' && num_2 == 0))
+	if ((*ops == '/' && num_2 == 0) || (*ops == '%' && num_2 == 0))
 	{
 		printf("Error\n");
 		exit(100);
