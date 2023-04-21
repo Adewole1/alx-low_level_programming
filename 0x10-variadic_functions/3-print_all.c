@@ -15,7 +15,7 @@ void print_all(const char * const format, ...)
 {
 	va_list args_list;
 	char *string, *separator = "";
-	unsigned int i = 0;
+	int i = 0;
 
 	va_start(args_list, format);
 
@@ -25,13 +25,6 @@ void print_all(const char * const format, ...)
 		{
 			switch (format[i])
 			{
-				case 's':
-					string = va_arg(args_list, char *);
-					if (!string)
-						printf("%s(nil)", separator);
-					else
-						printf("%s%s", separator, string);
-					break;
 				case 'c':
 					printf("%s%c", separator, va_arg(args_list, int));
 					break;
@@ -40,6 +33,13 @@ void print_all(const char * const format, ...)
 					break;
 				case 'f':
 					printf("%s%f", separator, va_arg(args_list, double));
+					break;
+				
+				case 's':
+					string = va_arg(args_list, char *);
+					if (!string)
+						string = "(nil)";
+					printf("%s%s", separator, string);
 					break;
 				default:
 					i++;
