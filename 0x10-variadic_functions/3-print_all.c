@@ -34,7 +34,6 @@ void print_all(const char * const format, ...)
 				case 'f':
 					printf("%s%f", separator, va_arg(args_list, double));
 					break;
-				
 				case 's':
 					string = va_arg(args_list, char *);
 					if (!string || string == NULL)
