@@ -1,4 +1,4 @@
-greeting: db 'Hello, Holberton\n'
+greeting: db 'Hello, Holberton'
 
 	global   main
 	extern    printf
