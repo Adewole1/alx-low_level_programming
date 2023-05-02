@@ -7,9 +7,9 @@
  *
  * Return: nothing
  */
-void free_listint(list_t *head)
+void free_listint(listint_t *head)
 {
-	list_t *node = NULL;
+	listint_t *node = NULL;
 
 	while (head != NULL)
 	{
