@@ -8,7 +8,7 @@
  *
  * Return: 1 for success or -1 for fail
  */
-int *delete_nodeint_at_index(listint_t **head, unsigned int index)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int count = 0;
 	listint_t *node = NULL;
